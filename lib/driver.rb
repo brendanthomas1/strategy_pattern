@@ -1,11 +1,11 @@
 class Driver
-  attr_reader :car
+  attr_reader :vehicle
 
-  def initialize(car)
-    @car = car
+  def initialize(vehicle)
+    @vehicle = vehicle
   end
 
   def floor_it
-    car.accelerate_to_max_speed
+    vehicle.accelerate_to_max_speed
   end
 end
