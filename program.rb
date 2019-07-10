@@ -1,13 +1,9 @@
-require './lib/driver'
-
-require './lib/vehicles/car'
-require './lib/vehicles/motorcycle'
-require './lib/vehicles/scooter'
+require './app/models/driver'
 
 puts " ~~simple example with car! ~~"
 puts
 
-vehicle = Vehicles::Car.new(106)
+vehicle = { type: :car, data: { top_speed: 106, make: 'Toyota', model: 'Camry' } }
 driver = Driver.new(vehicle)
 
 puts driver.floor_it
@@ -17,7 +13,7 @@ puts
 puts " ~~ example with motorcycle! ~~"
 puts
 
-vehicle = Vehicles::Motorcycle.new(152)
+vehicle = { type: :motorcycle, data: { top_speed: 152, make: 'Indian' } }
 driver = Driver.new(vehicle)
 
 puts driver.floor_it
@@ -27,7 +23,7 @@ puts
 puts " ~~ example with motorcycle! ~~"
 puts
 
-vehicle = Vehicles::Scooter.new(11)
+vehicle = { type: :scooter, data: { top_speed: 11 } }
 driver = Driver.new(vehicle)
 
 puts driver.floor_it
